@@ -1,0 +1,25 @@
+.site-header {
+	background: #bbb;
+	color: white;
+
+	&-content {
+		margin: 0 auto;
+		max-width: $max-width;
+	}
+}
+
+.site-branding {
+	display: inline-block;
+
+	.site-title {
+		margin: 0;
+	}
+
+	.site-description {
+		margin: 0;
+	}
+}
+
+.site-navigation {
+	display: inline-block;
+}

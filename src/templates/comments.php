@@ -9,7 +9,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php twentyfifteen_comment_nav(); ?>
+		<?php paginate_comments_links(); ?> 
 
 		<ol class="comment-list">
 			<?php
@@ -29,9 +29,9 @@ if ( post_password_required() ) {
 					'avatar_size' => 56,
 				) );
 			?>
-		</ol><!-- .comment-list -->
+		</ol>
 
-		<?php twentyfifteen_comment_nav(); ?>
+		<?php paginate_comments_links(); ?> 
 
 	<?php endif; // have_comments() ?>
 
@@ -44,4 +44,4 @@ if ( post_password_required() ) {
 
 	<?php comment_form(); ?>
 
-</div><!-- .comments-area -->
+</div>
