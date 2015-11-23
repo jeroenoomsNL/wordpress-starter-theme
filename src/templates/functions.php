@@ -112,6 +112,9 @@ function html5clean_scripts() {
 	// Load our main stylesheet
 	wp_enqueue_style( 'html5clean-style', get_stylesheet_uri() );
 
+	// Load Font Awesome 
+	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), null );
+
 	// Load our scripts
 	wp_enqueue_script( 'html5clean-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true );
 }
