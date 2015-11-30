@@ -1,8 +1,14 @@
 .site-footer {
-	background: #333;
+	background: $footer-background-color;
+	color: $footer-text-color;
+
+	a {
+		color: $footer-link-color;
+	}
 }
 
 .site-info {
 	margin: 0 auto;
 	max-width: $max-width;
+	padding: 1em;
 }

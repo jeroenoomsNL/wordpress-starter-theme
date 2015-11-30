@@ -1,10 +1,15 @@
 .site-header {
-	background: #bbb;
-	color: white;
+	background: $header-background-color;
+	color: $header-text-color;
+
+	a {
+		color: $header-link-color;
+	}
 
 	&-content {
 		margin: 0 auto;
 		max-width: $max-width;
+		padding: 1em;
 	}
 }
 
@@ -22,11 +27,18 @@
 
 .site-navigation {
 	display: inline-block;
+
+	.nav-menu {
+		.menu-item {
+			display: inline-block;
+		}
+	}
 }
 
 .navigation-toggle {
-	border: 1px solid black;
-	color: black;
+	background: transparent;
+	border: 1px solid $header-link-color;
+	color: $header-link-color;
 	height: 40px;
     overflow: hidden;
     padding: 10px;
