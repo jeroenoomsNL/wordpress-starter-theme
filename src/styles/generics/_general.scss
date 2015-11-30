@@ -1,6 +1,24 @@
+$primary-background-color: #F5F5F5;
+$primary-text-color: #0D0D0D;
+$primary-link-color: #125E87;
+
+$header-background-color: #001726;
+$header-text-color: darken(#A2C2DB,20);
+$header-link-color: #A2C2DB;
+
+$footer-background-color: #0D0D0D;
+$footer-text-color: darken(#F5F5F5,20);
+$footer-link-color: #F5F5F5;
+
 $max-width: 960px;
 
 .site-content {
 	margin: 0 auto;
 	max-width: $max-width;
+	padding: 1em;
+
+	a {
+		color: $primary-link-color;
+		text-decoration: none;
+	}
 }
