@@ -12,6 +12,10 @@ Tags: clean, responsive-layout, html5
 @import 'generics/boilerplate';
 @import 'generics/general';
 
+/* partials */
 @import 'templates/header';
-@import 'templates/sidebar';
 @import 'templates/footer';
+@import 'templates/sidebar';
+
+/* pages */
+@import 'templates/home';

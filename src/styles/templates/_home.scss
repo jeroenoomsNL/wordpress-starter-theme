@@ -1,0 +1,14 @@
+.home {
+	.site-header {
+		background: url('https://images.unsplash.com/photo-1422640805998-18a4dd89bec2?dpr=2&fit=crop&fm=jpg&h=900&ixjsv=2.0.0&ixlib=rb-0.3.5&q=50&w=1425');
+		background-size: cover;
+		height: 600px;
+
+		color: $primary-background-color;
+
+		a {
+			color: $primary-background-color;
+		}
+
+	}
+}
