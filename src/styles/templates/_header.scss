@@ -2,10 +2,6 @@
 	background: $header-background-color;
 	color: $header-text-color;
 
-	a {
-		color: $header-link-color;
-	}
-
 	&-content {
 		display: flex;
 		justify-content: space-between;
@@ -19,10 +15,21 @@
 	display: inline-block;
 
 	.site-title {
+		font-family: 'Droid Serif', serif;
+		font-size: 1.5em;
+		font-weight: bold;
 		margin: 0;
+
+		a {
+			color: $header-link-color;
+			text-decoration: none;
+		}
 	}
 
 	.site-description {
+		color: $header-text-color;
+		font-family: 'Droid Serif', serif;
+		font-size: 0.75em;
 		margin: 0;
 	}
 }
@@ -38,10 +45,15 @@
 
 		.menu-item {
 			display: inline-block;
-			margin: 0 0.3em;
+			margin: 0 1em;
 
 			a {
+				color: $header-link-color;
 				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
