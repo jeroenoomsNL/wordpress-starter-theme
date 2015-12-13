@@ -116,7 +116,7 @@ function startertheme_scripts() {
 	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), null );
 
 	// Load our scripts
-	wp_enqueue_script( 'startertheme-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'startertheme-script', get_template_directory_uri() . '/scripts/scripts.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'startertheme_scripts' );
 
