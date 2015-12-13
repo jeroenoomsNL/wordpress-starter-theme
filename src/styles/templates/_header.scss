@@ -29,23 +29,26 @@
 	.site-description {
 		color: $header-text-color;
 		font-family: 'Droid Serif', serif;
-		font-size: 0.75em;
+		font-size: 1em;
 		margin: 0;
 	}
 }
 
 .site-navigation {
-	display: inline-block;
+	display: none;
+
+	@include breakpoint('lg') {
+		display: block;
+	}
 
 	.nav-menu {
 		font-family: 'Droid Serif', serif;
 		font-size: 1.25em;
-		margin: 0.5em; 
-		padding: 0;
+		margin: 0.5em 0; 
 
 		.menu-item {
 			display: inline-block;
-			margin: 0 1em;
+			margin: 0 0 0 1em;
 
 			a {
 				color: $header-link-color;
@@ -67,6 +70,10 @@
     overflow: hidden;
     padding: 10px;
 	width: 40px;
+
+	@include breakpoint('lg') {
+		display: none;
+	}
 
 	&:before {
 		content: "\f0c9";
