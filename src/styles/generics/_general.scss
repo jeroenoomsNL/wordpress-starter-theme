@@ -10,11 +10,77 @@ $footer-background-color: #06283E;
 $footer-text-color: darken(#F5F5F5,20);
 $footer-link-color: #F5F5F5;
 
+$border-color: #d1d1d1;
+
 $max-width: 960px;
 
 body {
 	color: $primary-text-color;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.2em;
+}
+
+ul {
+	padding: 0;
+	margin-top: 0;
+
+	li {
+		margin-left: 20px;
+	}
+}
+
+table {
+	border: 1px solid $border-color;
+	border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 2em;
+    table-layout: fixed;
+    width: 100%;
+
+	th {
+		font-weight: bold;
+	}
+
+    th, td {
+        border: 1px solid $border-color;
+    	border-width: 0 1px 1px 0;
+    	padding: 0.4em;
+    	text-align: left;
+    }
+}
+
+pre {
+	border: 1px dotted $border-color;
+	padding: 1em;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted $border-color;
+    cursor: help;
+}
+
+hr {
+    border-top: 1px solid $border-color;
+}
+
+blockquote {
+	border-left: 0.3em solid $border-color;
+	font-family: 'Droid Serif', serif;
+	margin-left: 0;
+	padding-left: 2em;
+}
+
+.says, .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+ }
 
 .entry-title {
 	color: $primary-link-color;
@@ -28,6 +94,7 @@ body {
 }
 
 .site-content {
+	display: flex;
 	margin: 0 auto;
 	max-width: $max-width;
 	padding: 1em;
@@ -36,4 +103,8 @@ body {
 		color: $primary-link-color;
 		text-decoration: none;
 	}
+}
+
+.site-main {
+	width: 100%;
 }

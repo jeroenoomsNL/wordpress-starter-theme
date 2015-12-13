@@ -1,0 +1,30 @@
+.sidebar {
+	display: none;
+	width: 18em;
+	flex-shrink: 0;
+	padding-left: 3em;
+
+	@include breakpoint('lg') {
+		display: block;
+	}
+
+	h2 {
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+}
+
+.widget {
+	margin-bottom: 2em;
+}
+
+.widget_calendar {
+	caption {
+		font-family: 'Droid Serif', serif;
+		margin-bottom: 0.5em;
+	}
+
+	tfoot td:not(:last-child) {
+		border-right: 0;
+	}
+}

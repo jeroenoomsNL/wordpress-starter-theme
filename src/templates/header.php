@@ -33,12 +33,9 @@
 					) );
 				?>
 			</nav>
-		<?php endif; ?>
-
 			<button class="navigation-toggle"><?php _e( 'Menu and widgets', 'startertheme' ); ?></button>
+			<?php endif; ?>
 		</div>
 	</header>
-	
-	<?php get_sidebar(); ?>
 	
 	<div class="site-content">

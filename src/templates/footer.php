@@ -1,8 +1,12 @@
+	
+		<?php get_sidebar(); ?>
+
 	</div><!-- .site-content -->
 
 	<footer class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://jeroenooms.nl', 'startertheme' ) ); ?>"><?php printf( __( 'HTML5 Clean by %s', 'startertheme' ), 'Jeroen Ooms' ); ?></a>
+			Powered by <a href="http://jeroenooms.nl">Wordpress</a>. Theme by
+			<a href="http://jeroenooms.nl">Jeroen Ooms</a>.
 		</div>
 	</footer>
 

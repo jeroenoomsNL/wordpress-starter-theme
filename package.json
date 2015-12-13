@@ -1,8 +1,8 @@
 {
-  "name": "html5-clean-wordpress-theme",
+  "name": "wordpress-starter-theme",
   "version": "1.0.0",
   "author": "Jeroen Ooms (@jeroenooms)",
-  "description": "A clean and future proof HTML5 Wordpress theme without overhead and support for very old dinosaur browsers.",
+  "description": "A clean and future proof and highly customizable HTML5 Wordpress starter theme with SASS support.",
   "engines": {
     "node": ">=0.10.0"
   },
