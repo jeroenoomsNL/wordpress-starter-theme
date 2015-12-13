@@ -4,6 +4,8 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
+var wordpressThemeFolder = '../wordpress/wp-content/themes/startertheme';
+
 gulp.task('styles', function () {
   return gulp.src('src/styles/style.scss')
     .pipe($.plumber())
@@ -64,7 +66,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.sass-cache','dist']));
 
-gulp.task('watch', ['connect'], function () {
+gulp.task('watch', function () {
   $.livereload.listen();
 
   // watch for changes
@@ -73,12 +75,23 @@ gulp.task('watch', ['connect'], function () {
     'src/styles/**/*.scss',
     'src/scripts/**/*.js',
     'src/languages/**/*',
-    'src/images/**/*'
-  ]).on('change', $.livereload.changed);
+    'src/images/**/*',
+    'src/fonts/**/*'
+  ]).on('change', function() {
+    gulp.start('local');
+    $.livereload.changed();
+  });
+
 });
 
 gulp.task('build', ['templates', 'styles', 'scripts', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+});
+
+gulp.task('local', ['templates', 'styles', 'scripts', 'images', 'fonts', 'extras'], function () {
+  return gulp.src('dist/**/*')
+    .pipe(gulp.dest(wordpressThemeFolder))
+    .pipe($.size({title: 'local'}));
 });
 
 gulp.task('default', ['clean'], function () {

@@ -24,12 +24,12 @@
 	<?php if ( 'post' == get_post_type() ) : ?>
 
 		<footer class="entry-footer">
-			<?php edit_post_link( __( 'Edit', 'html5clean' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'startertheme' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-footer -->
 
 	<?php else : ?>
 
-		<?php edit_post_link( __( 'Edit', 'html5clean' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer><!-- .entry-footer -->' ); ?>
+		<?php edit_post_link( __( 'Edit', 'startertheme' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer><!-- .entry-footer -->' ); ?>
 
 	<?php endif; ?>
 

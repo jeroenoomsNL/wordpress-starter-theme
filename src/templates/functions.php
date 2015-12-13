@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'html5clean_setup' ) ) :
+if ( ! function_exists( 'startertheme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -8,15 +8,15 @@ if ( ! function_exists( 'html5clean_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function html5clean_setup() {
+function startertheme_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on html5clean, use a find and replace
-	 * to change 'html5clean' to the name of your theme in all the template files
+	 * If you're building a theme based on startertheme, use a find and replace
+	 * to change 'startertheme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'html5clean', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'startertheme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -35,12 +35,12 @@ function html5clean_setup() {
 	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 825, 510, true );
+	set_post_thumbnail_size( 900, 350, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu',      'html5clean' ),
-		'social'  => __( 'Social Links Menu', 'html5clean' ),
+		'primary' => __( 'Primary Menu',      'startertheme' ),
+		'social'  => __( 'Social Links Menu', 'startertheme' ),
 	) );
 
 	/*
@@ -61,29 +61,29 @@ function html5clean_setup() {
 	) );
 }
 endif;
-add_action( 'after_setup_theme', 'html5clean_setup' );
+add_action( 'after_setup_theme', 'startertheme_setup' );
 
 /**
  * Register widget area
  */
-function html5clean_widgets_init() {
+function startertheme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Widget Area', 'html5clean' ),
+		'name'          => __( 'Widget Area', 'startertheme' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'html5clean' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'startertheme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'html5clean_widgets_init' );
+add_action( 'widgets_init', 'startertheme_widgets_init' );
 
-if ( ! function_exists( 'html5clean_fonts_url' ) ) :
+if ( ! function_exists( 'startertheme_fonts_url' ) ) :
 /**
  * Register Google fonts for theme
  */
-function html5clean_fonts_url() {
+function startertheme_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
@@ -105,20 +105,20 @@ endif;
 /**
  * Enqueue scripts and styles
  */
-function html5clean_scripts() {
+function startertheme_scripts() {
 	// Add custom fonts, used in the main stylesheet
-	wp_enqueue_style( 'html5clean-fonts', html5clean_fonts_url(), array(), null );
+	wp_enqueue_style( 'startertheme-fonts', startertheme_fonts_url(), array(), null );
 
 	// Load our main stylesheet
-	wp_enqueue_style( 'html5clean-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'startertheme-style', get_stylesheet_uri() );
 
 	// Load Font Awesome 
 	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), null );
 
 	// Load our scripts
-	wp_enqueue_script( 'html5clean-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'startertheme-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'html5clean_scripts' );
+add_action( 'wp_enqueue_scripts', 'startertheme_scripts' );
 
 /**
  * Disable emoji support

@@ -5,7 +5,7 @@
 	<?php if ( have_posts() ) : ?>
 
 		<header class="page-header">
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'html5clean' ), get_search_query() ); ?></h1>
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'startertheme' ), get_search_query() ); ?></h1>
 		</header>
 
 		<?php
@@ -25,9 +25,9 @@
 
 		// Previous/next page navigation.
 		the_posts_pagination( array(
-			'prev_text'          => __( 'Previous page', 'html5clean' ),
-			'next_text'          => __( 'Next page', 'html5clean' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'html5clean' ) . ' </span>',
+			'prev_text'          => __( 'Previous page', 'startertheme' ),
+			'next_text'          => __( 'Next page', 'startertheme' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'startertheme' ) . ' </span>',
 		) );
 
 	// If no content, include the "No posts found" template.

@@ -20,11 +20,11 @@
 
 		// Previous/next post navigation.
 		the_post_navigation( array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'html5clean' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Next post:', 'html5clean' ) . '</span> ' .
+			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'startertheme' ) . '</span> ' .
+				'<span class="screen-reader-text">' . __( 'Next post:', 'startertheme' ) . '</span> ' .
 				'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'html5clean' ) . '</span> ' .
-				'<span class="screen-reader-text">' . __( 'Previous post:', 'html5clean' ) . '</span> ' .
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'startertheme' ) . '</span> ' .
+				'<span class="screen-reader-text">' . __( 'Previous post:', 'startertheme' ) . '</span> ' .
 				'<span class="post-title">%title</span>',
 		) );
 

@@ -27,9 +27,9 @@
 
 		// Previous/next page navigation.
 		the_posts_pagination( array(
-			'prev_text'          => __( 'Previous page', 'html5clean' ),
-			'next_text'          => __( 'Next page', 'html5clean' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'html5clean' ) . ' </span>',
+			'prev_text'          => __( 'Previous page', 'startertheme' ),
+			'next_text'          => __( 'Next page', 'startertheme' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'startertheme' ) . ' </span>',
 		) );
 
 	// If no content, include the "No posts found" template.

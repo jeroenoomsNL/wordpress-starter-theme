@@ -35,7 +35,7 @@
 			</nav>
 		<?php endif; ?>
 
-			<button class="navigation-toggle"><?php _e( 'Menu and widgets', 'html5clean' ); ?></button>
+			<button class="navigation-toggle"><?php _e( 'Menu and widgets', 'startertheme' ); ?></button>
 		</div>
 	</header>
 	

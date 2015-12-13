@@ -1,2 +1,2 @@
-# html5-clean-wordpress-theme
-A clean and future proof HTML5 Wordpress theme without overhead and support for very old dinosaur browsers. 
+# wordpress-starter-theme
+A clean and future proof and highly customizable HTML5 Wordpress starter theme with SASS support.
