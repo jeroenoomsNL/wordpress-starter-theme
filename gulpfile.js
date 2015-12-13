@@ -7,12 +7,8 @@ var $ = require('gulp-load-plugins')();
 var wordpressThemeFolder = '../wordpress/wp-content/themes/startertheme';
 
 gulp.task('styles', function () {
-  return gulp.src('src/styles/style.scss')
-    .pipe($.plumber())
-    .pipe($.rubySass({
-      style: 'expanded',
-      precision: 10
-    }))
+  return $.rubySass('src/styles/style.scss', {precision: 10, style: 'compressed'})
+    .on('error', $.rubySass.logError)
     .pipe($.autoprefixer({browsers: ['last 2 versions']}))
     .pipe(gulp.dest('dist'));
 });
