@@ -2,11 +2,11 @@ $primary-background-color: #F5F5F5;
 $primary-text-color: #525252;
 $primary-link-color: #125E87;
 
-$header-background-color: #001726;
+$header-background-color: #143850;
 $header-text-color: darken(#F5F5F5,20);
 $header-link-color: #fff;
 
-$footer-background-color: #0D0D0D;
+$footer-background-color: #06283E;
 $footer-text-color: darken(#F5F5F5,20);
 $footer-link-color: #F5F5F5;
 
@@ -17,12 +17,14 @@ body {
 }
 
 .entry-title {
+	color: $primary-link-color;
 	font-family: 'Droid Serif', serif;
 	font-size: 2em;
 }
 
 .entry-content {
 	font-size: 1.2em;
+	line-height: 1.8;
 }
 
 .site-content {

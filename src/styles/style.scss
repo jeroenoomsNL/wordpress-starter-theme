@@ -1,21 +1,29 @@
 /*
-Theme Name: HTML5 Clean
-Theme URI: https://github.com/jeroenoomsNL/html5-clean-wordpress-theme
+Theme Name: Wordpress Starter Theme
+Theme URI: https://github.com/jeroenoomsNL/wordpress-starter-theme
 Author: Jeroen Ooms
 Author URI: https://jeroenooms.nl
-Description: A clean future proof HTML5 Wordpress theme without overhead and support for very old dinosaur browsers.
+Description: A clean and future proof HTML5 Wordpress stars theme with SASS support.
 Version: 1.0
 Tags: clean, responsive-layout, html5
 */
 
+
+/* normalize & boilerplate */
 @import 'generics/normalize';
 @import 'generics/boilerplate';
+
+/* helpers */
+@import 'helpers/breakpoints';
+
+/* general */
 @import 'generics/general';
 
 /* partials */
 @import 'templates/header';
 @import 'templates/footer';
 @import 'templates/sidebar';
+@import 'templates/article';
 
 /* pages */
 @import 'templates/home';
