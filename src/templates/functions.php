@@ -147,3 +147,22 @@ function disable_emojicons_tinymce( $plugins ) {
   }
 }
 
+
+/**
+ * Remove useless classes from post article tag
+ */
+function remove_useless_classed($classes) {
+    $matched_classes = preg_grep("/^(tag-|category-|post_format-).*/", $classes);
+
+    foreach($matched_classes as $match_value) {
+    	foreach($classes as $key => $class_value) {
+    		if($match_value == $class_value) {
+    			unset( $classes[ $key ] );
+    		}
+    	}
+    }
+ 
+    return $classes;
+}
+add_filter('post_class','remove_useless_classed');
+
