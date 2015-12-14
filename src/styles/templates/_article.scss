@@ -1,3 +1,29 @@
+.entry-title {
+	color: $primary-link-color;
+	font-family: 'Droid Serif', serif;
+	font-size: 2em;
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.entry-meta {
+	a {
+		color: $secondary-link-color;
+
+		&:hover {
+			color: $secondary-link-color-hover;
+		}
+	}
+}
+
+.entry-content {
+	font-family: 'Droid Serif', serif;
+	font-size: 1.2em;
+	line-height: 1.8;
+}
+
 .wp-post-image {
 	height: auto;
 	width: 100%;

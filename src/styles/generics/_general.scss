@@ -66,18 +66,6 @@ blockquote {
     word-wrap: normal !important;
  }
 
-.entry-title {
-	color: $primary-link-color;
-	font-family: 'Droid Serif', serif;
-	font-size: 2em;
-}
-
-.entry-content {
-	font-family: 'Droid Serif', serif;
-	font-size: 1.2em;
-	line-height: 1.8;
-}
-
 .site-content {
 	display: flex;
 	margin: 0 auto;
@@ -87,6 +75,11 @@ blockquote {
 	a {
 		color: $primary-link-color;
 		text-decoration: none;
+
+		&:hover {
+			color: $primary-link-color-hover;
+			text-decoration: underline;
+		}
 	}
 }
 
