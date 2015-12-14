@@ -12,6 +12,10 @@ Tags: clean, responsive-layout, html5
 @import 'generics/normalize';
 @import 'generics/boilerplate';
 
+/* config */
+@import 'config/colors';
+@import 'config/globals';
+
 /* helpers */
 @import 'helpers/breakpoints';
 
@@ -19,9 +23,11 @@ Tags: clean, responsive-layout, html5
 @import 'generics/general';
 
 /* partials */
+@import 'templates/article';
+@import 'templates/forms';
 @import 'templates/header';
 @import 'templates/footer';
 @import 'templates/sidebar';
-@import 'templates/article';
+
 
 /* pages */
