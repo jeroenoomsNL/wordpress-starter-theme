@@ -10,6 +10,10 @@
 
 <body <?php body_class(); ?>>
 <div class="site">
+
+    <!--[if lt IE 10]>
+        <div class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and your life.</div>
+    <![endif]-->
 	
 	<header class="site-header" role="banner">
 		<div class="site-header-content">

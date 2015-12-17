@@ -57,6 +57,18 @@ blockquote {
 	padding-left: 2em;
 }
 
+.browserupgrade {
+    background: $alert-color;
+    color: $primary-text-color;
+    font-family: Helvetica, sans-serif;
+    padding: 1em;
+    text-align: center;
+}
+
+.browserupgrade a {
+    color: #525252;
+}
+
 .says, .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
