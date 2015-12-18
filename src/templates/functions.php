@@ -35,7 +35,7 @@ function startertheme_setup() {
 	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 900, 350, true );
+	set_post_thumbnail_size( 1200, 0, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -146,7 +146,6 @@ function disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
-
 
 /**
  * Remove useless classes from post article tag

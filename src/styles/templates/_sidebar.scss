@@ -28,3 +28,17 @@
 		border-right: 0;
 	}
 }
+
+.widget_search {
+	.search-form {
+		display: flex;
+
+		label {
+			flex-grow: 1;
+		}
+
+		.search-field {
+			border-right: 0px;
+		}
+	}
+}
