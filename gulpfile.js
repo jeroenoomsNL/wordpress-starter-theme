@@ -3,8 +3,10 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var browserSync = require('browser-sync').create();
 
 var wordpressThemeFolder = '../wordpress/wp-content/themes/startertheme';
+var wordpressLocalhost = 'localhost:8888/wordpress';
 
 gulp.task('styles', function () {
   return $.rubySass('src/styles/style.scss', {precision: 10, style: 'compressed'})
@@ -52,7 +54,7 @@ gulp.task('templates', function () {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('extras', function () {
+gulp.task('languages', function () {
   return gulp.src([
     'src/languages/**/*'
   ], {
@@ -63,28 +65,24 @@ gulp.task('extras', function () {
 gulp.task('clean', require('del').bind(null, ['.sass-cache','dist']));
 
 gulp.task('watch', function () {
-  $.livereload.listen();
 
-  // watch for changes
-  gulp.watch([
-    'src/templates/**/*.php',
-    'src/styles/**/*.scss',
-    'src/scripts/**/*.js',
-    'src/languages/**/*',
-    'src/images/**/*',
-    'src/fonts/**/*'
-  ]).on('change', function() {
-    gulp.start('local');
-    $.livereload.changed();
+  browserSync.init({
+    proxy: {
+      target: wordpressLocalhost
+    },
+    nofity: false
   });
 
+  gulp.watch('src/**/*', ['local']);
+
+  gulp.watch(wordpressThemeFolder).on('change', browserSync.reload);
 });
 
-gulp.task('build', ['templates', 'styles', 'scripts', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', ['templates', 'styles', 'scripts', 'images', 'fonts', 'languages'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('local', ['templates', 'styles', 'scripts', 'images', 'fonts', 'extras'], function () {
+gulp.task('local', ['templates', 'styles', 'scripts', 'images', 'fonts', 'languages'], function () {
   return gulp.src('dist/**/*')
     .pipe(gulp.dest(wordpressThemeFolder))
     .pipe($.size({title: 'local'}));
