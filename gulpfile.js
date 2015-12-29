@@ -4,15 +4,23 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
+var params = $.util.env;
 
 var wordpressThemeFolder = '../wordpress/wp-content/themes/startertheme';
 var wordpressLocalhost = 'localhost:8888/wordpress';
 
 gulp.task('styles', function () {
-  return $.rubySass('src/styles/style.scss', {precision: 10, style: 'compressed'})
+  return $.rubySass('src/styles/style.scss', {
+      precision: 10,
+      sourcemap: params.production ? false : true,
+      style: params.production ? 'compressed' : 'expanded',
+      loadPath: ['node_modules']
+    })
     .on('error', $.rubySass.logError)
     .pipe($.autoprefixer({browsers: ['last 2 versions']}))
-    .pipe(gulp.dest('dist'));
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('dist'))
+    .pipe($.size({title: 'styles'}));
 });
 
 gulp.task('jshint', function () {
@@ -27,7 +35,8 @@ gulp.task('scripts', ['jshint'], function () {
     base: 'src'
   })
     .pipe($.uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe($.size({title: 'scripts'}));
 });
 
 gulp.task('images', function () {
@@ -36,22 +45,26 @@ gulp.task('images', function () {
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/images'))
+    .pipe($.size({title: 'images'}));
 });
 
 gulp.task('fonts', function () {
   return gulp.src('src/fonts/**/*')
     .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
     .pipe($.flatten())
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe($.size({title: 'fonts'}));
 });
 
 gulp.task('templates', function () {
-  return gulp.src([
-    'src/templates/**/*'
-  ], {
-    base: 'src/templates'
-  }).pipe(gulp.dest('dist'));
+  return gulp.src(
+    ['src/templates/**/*'],
+    {
+      base: 'src/templates'
+    })
+  .pipe(gulp.dest('dist'))
+  .pipe($.size({title: 'templates'}));
 });
 
 gulp.task('languages', function () {
@@ -59,7 +72,8 @@ gulp.task('languages', function () {
     'src/languages/**/*'
   ], {
     base: 'src'
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('dist'))
+  .pipe($.size({title: 'languages'}));
 });
 
 gulp.task('clean', require('del').bind(null, ['.sass-cache','dist']));
@@ -75,7 +89,7 @@ gulp.task('watch', function () {
 
   gulp.watch('src/**/*', ['local']);
 
-  gulp.watch(wordpressThemeFolder).on('change', browserSync.reload);
+  browserSync.watch(wordpressThemeFolder).on('change', browserSync.reload);
 });
 
 gulp.task('build', ['templates', 'styles', 'scripts', 'images', 'fonts', 'languages'], function () {
