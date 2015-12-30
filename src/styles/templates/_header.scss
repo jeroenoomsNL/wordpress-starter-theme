@@ -4,10 +4,15 @@
 
 	&-content {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 0 auto;
 		max-width: $max-width;
 		padding: 1em;
+
+		@include breakpoint('md') {
+			flex-wrap: nowrap;
+		}
 	}
 }
 
@@ -36,9 +41,28 @@
 
 .site-navigation {
 	display: none;
+	flex-basis: 100%;
+	order: 4;
+
+	&.active {
+		display: block;
+		
+		.nav-menu {
+			padding: 0;
+			margin-top: 1em;
+
+			li {
+				display: block;
+				margin-left: 0;
+				padding: 0.5em 0;
+			}
+		}
+	}
 
 	@include breakpoint('lg') {
 		display: block;
+		flex-basis: auto;
+		order: 2;
 	}
 
 	.nav-menu {
@@ -70,6 +94,7 @@
     overflow: hidden;
     padding: 10px;
 	width: 40px;
+	page-break-after:always; 
 
 	@include breakpoint('lg') {
 		display: none;

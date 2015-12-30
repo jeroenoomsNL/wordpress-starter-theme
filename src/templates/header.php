@@ -27,7 +27,7 @@
 			</div>
 
 			<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<nav class="site-navigation" role="navigation">
+			<nav class="site-navigation" id="toggleMenu" role="navigation">
 				<?php
 					// Primary navigation menu.
 					wp_nav_menu( array(
@@ -37,7 +37,7 @@
 					) );
 				?>
 			</nav>
-			<button class="navigation-toggle"><?php _e( 'Menu and widgets', 'startertheme' ); ?></button>
+			<button class="navigation-toggle" id="toggleButton"><?php _e( 'Menu and widgets', 'startertheme' ); ?></button>
 			<?php endif; ?>
 		</div>
 	</header>

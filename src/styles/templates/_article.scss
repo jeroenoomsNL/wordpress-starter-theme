@@ -1,7 +1,7 @@
 .entry-title {
 	color: $primary-link-color;
-	font-family: 'Droid Serif', serif;
 	font-size: 2em;
+	margin-top: 0;
 
 	a:hover {
 		text-decoration: none;
@@ -22,6 +22,10 @@
 	font-family: 'Droid Serif', serif;
 	font-size: 1.2em;
 	line-height: 1.8;
+}
+
+.entry-image {
+	margin-bottom: 1em;
 }
 
 .wp-post-image {
