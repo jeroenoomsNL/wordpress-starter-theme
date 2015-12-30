@@ -1,6 +1,7 @@
 input[type="text"],
 input[type="date"],
 input[type="tel"],
+input[type="url"],
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -21,4 +22,8 @@ textarea {
 input[type="radio"],
 input[type="checkbox"] {
 	margin-right: 0.4em;
+}
+
+button,  input[type="button"], input[type="submit"] {
+	padding: 0.5em;
 }

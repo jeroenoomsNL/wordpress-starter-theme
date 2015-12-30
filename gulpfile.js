@@ -89,7 +89,7 @@ gulp.task('watch', function () {
 
   gulp.watch('src/**/*', ['local']);
 
-  browserSync.watch(wordpressThemeFolder).on('change', browserSync.reload);
+  gulp.watch('dist/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('build', ['templates', 'styles', 'scripts', 'images', 'fonts', 'languages'], function () {
