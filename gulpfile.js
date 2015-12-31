@@ -102,6 +102,12 @@ gulp.task('local', ['templates', 'styles', 'scripts', 'images', 'fonts', 'langua
     .pipe($.size({title: 'local'}));
 });
 
+gulp.task('bundle', ['templates', 'styles', 'scripts', 'images', 'fonts', 'languages'], function () {
+  return gulp.src('dist/**/*')
+    .pipe(gulp.dest(wordpressThemeFolder))
+    .pipe($.size({title: 'local'}));
+});
+
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });

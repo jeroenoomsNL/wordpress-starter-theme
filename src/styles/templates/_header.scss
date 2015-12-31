@@ -68,11 +68,33 @@
 	.nav-menu {
 		font-family: 'Droid Serif', serif;
 		font-size: 1.25em;
-		margin: 0.5em 0; 
+		margin: 0.5em 0;
+
+		@include breakpoint('lg') {
+			.sub-menu {
+				display: none;
+			}
+		}	
 
 		.menu-item {
 			display: inline-block;
 			margin: 0 0 0 1em;
+			position: relative;
+
+			@include breakpoint('lg') {
+				&:hover .sub-menu {
+					background: $header-background-color;
+					display: inline-block;
+					left: 0;
+					padding: 1em;
+					position: absolute;
+					top: 0.5em;
+
+					.menu-item {
+						margin: 0 0 0.5em;
+					}
+				}
+			}
 
 			a {
 				color: $header-link-color;
