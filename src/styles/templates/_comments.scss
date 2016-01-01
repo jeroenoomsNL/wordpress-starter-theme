@@ -1,4 +1,46 @@
 .comment-list {
 	list-style: none;
 	padding: 0;
+
+	.children {
+		list-style: none;
+	}
+}
+
+.comment-body {
+	border-bottom: 1px solid $border-color;
+	padding: 1em 0 0;
+
+	.reply {
+		margin-bottom: 1em;
+	}
+}
+
+.comment-meta {
+	margin-bottom: 1em;
+
+	&:after {
+		clear: both;
+		content: ' ';
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+
+	.comment-author .avatar {
+		float: left;
+		margin-right: 1em;
+	}
+
+	.edit-link:before {
+		content: ' | ';
+	}
+}
+
+.comment-content {
+	.comment-reply-link {
+		border: 1px solid $border-color;
+		display: inline-block;
+		padding: 0.5em;
+	}
 }

@@ -66,6 +66,7 @@ blockquote {
 	margin: 0 auto;
 	max-width: $max-width;
 	padding: 2em 1em 1em;
+    word-wrap: break-word;
 
 	a {
 		color: $primary-link-color;
@@ -79,5 +80,6 @@ blockquote {
 }
 
 .site-main {
+    overflow: hidden;
 	width: 100%;
 }
