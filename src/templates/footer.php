@@ -1,7 +1,7 @@
 	
 		<?php get_sidebar(); ?>
 
-	</div><!-- .site-content -->
+	</div>
 
 	<footer class="site-footer" role="contentinfo">
 		<div class="site-info">
@@ -10,7 +10,7 @@
 		</div>
 	</footer>
 
-</div><!-- .site -->
+</div>
 
 <?php wp_footer(); ?>
 
