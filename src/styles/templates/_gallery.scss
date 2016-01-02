@@ -1,0 +1,23 @@
+.gallery {
+	margin: 0 -1%;
+
+	.gallery-item {
+		display: inline-block;
+		margin: 1em 0;
+		padding: 0 1%;
+		vertical-align: top;
+
+		.gallery-icon img {
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	&.gallery-columns-3 .gallery-item {
+		width: 33.3333%;
+	}
+
+	&.gallery-columns-4 .gallery-item {
+		width: 25%;
+	}
+}
