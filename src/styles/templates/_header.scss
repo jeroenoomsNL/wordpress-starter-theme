@@ -84,11 +84,12 @@
 			@include breakpoint('lg') {
 				&:hover .sub-menu {
 					background: $header-background-color;
-					display: inline-block;
-					left: 0;
+					display: block;
+					left: -1em;
 					padding: 1em;
 					position: absolute;
 					top: 0.5em;
+					min-width: 13em;
 
 					.menu-item {
 						margin: 0 0 0.5em;
