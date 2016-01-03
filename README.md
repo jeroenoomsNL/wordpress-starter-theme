@@ -8,7 +8,8 @@ npm install
 
 ## Developing
 Build the theme with Gulp
-```bashgulp build
+```bash
+gulp build
 ```
 
 Copy theme files to your Wordpress installation on watch
