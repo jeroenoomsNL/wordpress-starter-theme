@@ -1,6 +1,6 @@
 {
   "name": "wordpress-starter-theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Jeroen Ooms (@jeroenooms)",
   "description": "A clean and future proof and highly customizable HTML5 Wordpress starter theme with SASS support.",
   "engines": {

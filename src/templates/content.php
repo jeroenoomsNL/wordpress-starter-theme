@@ -46,8 +46,6 @@
 		endif;
 	?>
 
-	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'startertheme' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer>
+	<footer class="entry-footer"></footer>
 
 </article>

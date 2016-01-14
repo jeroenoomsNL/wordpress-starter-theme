@@ -10,7 +10,6 @@
 			endif;
 		?>
 	</header>
-	<!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
@@ -30,8 +29,9 @@
 			) );
 		?>
 	</div>
-	<!-- .entry-content -->
 
+	<footer class="entry-footer"></footer>
+	
 	<?php
 		// Author bio.
 		if ( is_single() && get_the_author_meta( 'description' ) ) :
@@ -39,9 +39,4 @@
 		endif;
 	?>
 
-	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'startertheme' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer>
-	<!-- .entry-footer -->
-
-</article><!-- #post-## -->
+</article>
